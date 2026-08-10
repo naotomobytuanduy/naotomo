@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Não Tò Mò</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: #222;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    /* FORM GỬI CÂU HỎI */
+
+    .question-section {
+      margin: 20px auto 50px;
+      max-width: 600px;
+    }
+
+    .question-section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .question-section p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .question-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .question-form input,
+    .question-form textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+
+    .question-form input:focus,
+    .question-form textarea:focus {
+      border-color: #222;
+    }
+
+    .question-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .question-form button {
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #222;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .question-form button:hover {
+      opacity: 0.8;
+    }
+
+    /* CÁC CHỦ ĐỀ */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .card {
+      padding: 30px 10px;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #222;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- GIỚI THIỆU -->
+
+    <h1>NÃO TÒ MÒ</h1>
+
+    <p class="intro">
+      Khám phá những điều kỳ lạ nhất của vũ trụ,
+      thiên nhiên, động vật và cơ thể con người.
+    </p>
+
+    <a
+      class="btn"
+      href="https://www.youtube.com/channel/UCI3sW14wf7bi95W_OqBtYMg"
+      target="_blank"
+    >
+      Xem kênh YouTube
+    </a>
+
+
+    <!-- GỬI CÂU HỎI -->
+
+    <section class="question-section">
+
+      <h2>💡 Bạn tò mò điều gì?</h2>
+
+      <p>
+        Gửi câu hỏi cho mình, biết đâu câu hỏi của bạn sẽ trở thành video tiếp theo!
+      </p>
+
+      <form
+        class="question-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+
+        <!-- DÁN ACCESS KEY WEB3FORMS VÀO ĐÂY -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="714104be-4462-41c4-aaad-b37b7b1b2c87"
+        >
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Tên của bạn"
+          required
+        >
+
+        <textarea
+          name="message"
+          placeholder="Nhập câu hỏi của bạn..."
+          required
+        ></textarea>
+
+        <button type="submit">
+          Gửi câu hỏi 🚀
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- CHỦ ĐỀ -->
+
+    <div class="cards">
+
+      <a
+        class="card"
+        href="https://www.youtube.com/playlist?list=PLfaO_opS6nEE"
+        target="_blank"
+      >
+        🌌
+        <br>
+        Vũ trụ
+      </a>
+
+      <a
+        class="card"
+        href="https://www.youtube.com/playlist?list=PLHo2_Ms6S01c"
+        target="_blank"
+      >
+        🐾
+        <br>
+        Động vật
+      </a>
+
+      <a
+        class="card"
+        href="https://www.youtube.com/playlist?list=PLUUsicYbVSZ4"
+        target="_blank"
+      >
+        🌿
+        <br>
+        Thiên nhiên
+      </a>
+
+      <a
+        class="card"
+        href="https://www.youtube.com/playlist?list=PLMegGKWPryjQ"
+        target="_blank"
+      >
+        🧠
+        <br>
+        Cơ thể người
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
